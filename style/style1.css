@@ -192,6 +192,15 @@ section{
         margin: 0 1.6rem;
     }
 }
+bi bi-tree{
+    color: var( --bg-color);
+}
+@media (max-width: 468px) {
+    #liston-links bi bi-tree{
+        widht: 3cap;
+        height: 3cap;
+    }
+}
 
 /** Contenedor de esta seccion */
 section span {
