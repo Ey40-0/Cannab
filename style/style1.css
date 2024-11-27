@@ -192,11 +192,11 @@ section{
         margin: 0 1.6rem;
     }
 }
-bi bi-tree{
+color-tree{
     color: var( --bg-color);
 }
 @media (max-width: 468px) {
-    #liston-links bi bi-tree{
+    #liston-links color-tree{
         widht: 3cap;
         height: 3cap;
     }
