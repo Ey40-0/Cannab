@@ -1,0 +1,331 @@
+/*? GENERAL */
+
+/*TODO definicion de colores */
+:root{
+    --bg-color     : #fffffe   ;
+    --trans-gray   : #707070   ;
+    --white-shadows: #aeaeae55 ;
+    --darker       : #3f3f3f   ;           
+    --dark-gray    : #2e2e2e   ;
+    --fonts        : #202020   ;
+    --trans-shadows: #00000050 ;
+    --dark-green   : #00681fb0 ;
+    --whatsapp     : #00b700   ;
+    --reddit       : #ff7000   ;
+    --discord      : #0d46e4   ;
+    --github       : #000      ;
+}
+
+/** Suavisa el desplazamieno automatico */
+html{ 
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+/** Generalizacion de textos */
+*{ 
+    font-family: "C-delgada";
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+h2{ font-weight: 500; font-size: x-large; }
+h3{ font-size: 30px; font-weight: 500; }
+@media (max-width: 390px) {
+    section > article > h3{ text-align: center; }
+}
+
+b{ color: var(--darker); }
+
+/** Cuerpo de la pagina */
+body{
+    margin: 0;
+    background-color: var(--bg-color);
+    font-size: 16px;
+}
+
+/** Parrafos */
+p{
+    font-size: large;
+    color: var(--fonts);
+    text-align: justify;
+}
+@media (max-width: 768px) {
+    p{ font-size: medium; }
+}
+
+.verde{
+    color: var(--dark-green);
+    font-weight: 500;
+}
+.verde:hover{
+    text-decoration: underline;
+}
+.verde:focus{
+    text-decoration: underline;
+    outline: none;
+}
+
+
+/*? HEADER Y NAV*/
+
+/** Cabecera de la pagina */
+header{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+    padding: .7cap .7cap;
+    background-color: var(--bg-color);
+    box-shadow: 0 0 5px 0 var(--trans-shadows);
+}
+
+/** Logos de: Pantalla Grande y Pantalla Pequeña */
+#logo-1{ height: 6.5cap; display: block;}
+#logo-2{ height: 6.5cap; display: none;}
+@media (max-width: 768px) {
+    #logo-1{ display: none; }
+    #logo-2{ 
+        display: block;
+        height: 5cap;
+    }
+}
+
+/** Lista desordenada */
+ul{
+    margin-right: 20px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+@media (max-width: 468px) {
+    ul{ padding: 0; }
+}
+
+/** Barra de Navegacion */
+nav{ width: 30cap; }
+@media (max-width: 468px) {
+    nav{ width: 100%; }
+}
+
+/** Limks en el Nav */
+nav ul li > a{
+    font-size: large;
+    text-decoration: none;
+    color: var(--trans-gray);
+    transition: color, .15s ;
+}
+nav ul li > a:hover{
+    color: var(--bg-color);
+    padding: .5cap;
+    border-radius: .5cap;
+    background-color: var(--dark-green)
+}
+
+/*? SECTION */
+
+/** Desarrollo de la Pagina */
+section{
+    margin-top: 9rem;
+}
+@media (max-width: 768px) {
+    section{ margin-top: 8rem; }
+}
+
+#container1{
+    padding: 2rem;
+    margin: 3rem;
+    padding-top: 3rem;
+}
+
+#container1 img{
+    object-fit: contain;
+    float: right;
+    margin: 0 0 3rem 4rem;
+    min-width: 15%;
+    max-width: 18rem;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    #container1{ 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    #container1 img{
+        margin: 0;
+    }
+}
+
+#incognize{
+    color: var(--bg-color);
+    padding: 2.5cap;
+    background-color: var(--trans-shadows);
+    box-shadow: 0 0 4px 2px var(--bg-color);
+    border-radius: 1cap;
+}
+
+#incognize p, #incognize h3{ color: var(--bg-color); }
+#incognize b{ color: var(--whatsapp);}
+
+.container-g{
+    margin: 5rem;
+}
+
+#usos-marihuana{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style: outside;
+}
+
+#usos-marihuana li{
+    color: #707070;
+}
+
+#usos-marihuana li p{
+    margin: .4rem;
+    color: var(--fonts);
+}
+
+/*? ASIDE */
+
+aside{
+    float: left;
+    width: 100%;
+    background-image: url("/assets/banner-off.jpg");
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    box-shadow: 0 0 1rem .5rem var(--trans-shadows) inset;
+    margin: 2rem 0 5rem 0;
+}
+
+/*? FOOTER */
+
+footer{
+    float: left;
+    width: 100%;
+    margin-top: 5rem;
+}
+
+/** Contenedor del pie de pagina */
+#container-footer{
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--dark-gray);
+    border-top: 2px solid var(--dark-green);
+    box-shadow: 0 0 5rem 10px var(--dark-green);
+}
+
+.div_rrss{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#img1{color: var(--reddit);
+    transition: .2s;}
+#img1:hover{filter: drop-shadow(
+    0 0 .5rem var(--reddit));}
+#img1:focus{filter: drop-shadow(
+    0 0 .5rem var(--reddit));
+    outline: none;}
+
+#img2{color: var(--whatsapp);
+    transition: .2s;}
+#img2:hover{filter: drop-shadow(
+    0 0 .5rem var(--whatsapp));}
+#img2:focus{filter: drop-shadow(
+    0 0 .5rem var(--whatsapp));
+    outline: none;}
+
+#img3{color: var(--discord);
+    transition: .2s;}
+#img3:hover{filter: drop-shadow(
+    0 0 .5rem var(--discord));}
+#img3:focus{filter: drop-shadow(
+    0 0 .5rem var(--discord));
+    outline: none;}
+
+#img4{color: var(--github);
+    transition: .2s;}
+#img4:hover{filter: drop-shadow(
+    0 0 .5rem var(--bg-color));}
+#img4:focus{filter: drop-shadow(
+    0 0 .5rem var(--bg-color));
+    outline: none;}
+
+.bi{
+    width: 5rem;
+    height: 5rem;
+    margin: 2.2cap;
+}
+
+@media (max-width: 410px){
+    .bi{
+        margin: 1.3cap;
+    }
+}
+
+#openModalBtn{
+    background: none;
+    border: none;
+}
+
+#qr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#qr-code{
+    width: 80%;
+    border-radius: 3cap;
+    box-shadow: 0 0 2rem 1rem var(--white-shadows);
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0007;
+}
+
+.modal > div{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.close{
+    color: #000000;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus{
+    color: #414141;
+    text-decoration: none;
+    cursor: pointer;
+}
