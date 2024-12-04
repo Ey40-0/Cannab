@@ -1,4 +1,4 @@
-// ? Obtener los elementos del DOM
+// ? Obtener los elementos
 var modal = document.getElementById("modal");
 var openModalBtn = document.getElementById("openModalBtn");
 var closeModalBtn = document.getElementById("closeModalBtn");
